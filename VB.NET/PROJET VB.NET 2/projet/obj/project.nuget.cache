@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "10+44NxzpuM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\drlou\\Desktop\\Loukou Rene Michel\\PROJET VB.NET 2\\projet\\projet.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\drlou\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.4\\system.configuration.configurationmanager.9.0.4.nupkg.sha512",
+    "C:\\Users\\drlou\\.nuget\\packages\\system.data.oledb\\9.0.4\\system.data.oledb.9.0.4.nupkg.sha512",
+    "C:\\Users\\drlou\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.4\\system.diagnostics.eventlog.9.0.4.nupkg.sha512",
+    "C:\\Users\\drlou\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.4\\system.diagnostics.performancecounter.9.0.4.nupkg.sha512",
+    "C:\\Users\\drlou\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
