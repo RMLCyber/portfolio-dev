@@ -7,9 +7,9 @@ import ipaddress
 def get_api_key():
     while True:
         try:
-            key = input("Entrez votre clé API AbuseIPDB : ").strip()
+            key = input("Entrez votre clé API : ").strip()
             if not key or len(key) < 30:
-                raise ValueError("Clé API invalide ou trop courte.")
+                raise ValueError("Clé API invalide")
             return key
         except ValueError as e:
             print(f"Erreur : {e}")
@@ -39,16 +39,12 @@ def check_ip(ip_address):
         data = response.json()["data"]
         abuse_score = data.get("abuseConfidenceScore", 0)
 
-        # Couleur selon score
         if abuse_score >= 50:
-            color = "red"
-            status = " Suspect"
+            status = "Suspect"
         elif abuse_score >= 20:
-            color = "orange"
-            status = " À surveiller"
+            status = "À surveiller"
         else:
-            color = "green"
-            status = " Propre"
+            status = "Propre"
 
         result = f"""
  Résultats pour : {ip_address}
@@ -61,7 +57,6 @@ def check_ip(ip_address):
         result_box.config(state="normal")
         result_box.delete(1.0, tk.END)
         result_box.insert(tk.END, result)
-        result_box.tag_config("color", foreground=color)
         result_box.config(state="disabled")
     else:
         messagebox.showerror("Erreur API", f"Code : {response.status_code}\n{response.text}")
@@ -79,6 +74,5 @@ tk.Button(window, text="Analyser", font=("Arial", 12), command=lambda: check_ip(
 
 result_box = scrolledtext.ScrolledText(window, font=("Courier", 10), width=60, height=12, state="disabled")
 result_box.pack(pady=10)
-
 
 window.mainloop()
